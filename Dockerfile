@@ -21,7 +21,6 @@ docker build --no-cache \
   -t registry....:3.11.0 .
 
 
----- File manager
 docker build --no-cache \
   --build-arg GIT_BRANCH=release.v3.11.0 \
   --build-arg GIT_PASSWORD= \
@@ -32,13 +31,13 @@ docker build --no-cache \
   -t registry...:3.11.0
 
 
----- RMS API
+---- API
 docker build --no-cache \
   --build-arg GIT_BRANCH=release.v3.11.0 \
   --build-arg GIT_PASSWORD= \
   --build-arg GIT_USERNAME= \
   --build-arg PROFILE=build-api \
-  --build-arg SERVICE_RMS_SERVER_PORT=8182 \
+  --build-arg SERVICE_PORT=8182 \
   -f Dev.Dockerfile \
   -t registry....:3.11.0 .
 
